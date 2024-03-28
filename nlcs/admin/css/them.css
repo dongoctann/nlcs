@@ -1,0 +1,70 @@
+
+.product {
+    padding: 90px 0;
+}
+.product-content-left{
+width: 50%;
+}
+
+.product-content-right{
+    width: 50%;
+}
+
+.product-content-left img{
+    width: 70%;
+
+}
+.headeraddmin{
+  background-color: #ccc;
+  border: 5px solid #090;
+  color: blue;
+  border-radius: 5px;
+}
+
+.headeraddmin{
+    width: 1000px;
+    background-color: #fff;
+    border: 1px solid #090;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 2vw;
+  }
+.mb10{
+    margin-left:10px ;
+    margin-bottom: 10px;
+}
+.frmcontent {
+    padding: 40px;
+}
+
+.frmdsloai table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.frmdsloai table th:nth-child(1){
+    width: 10%;
+    padding: 20px;
+    background-color: #ccc;
+}
+.frmdsloai table th:nth-child(2){
+    width: 30%;
+    background-color: #ccc;
+    
+}
+.frmdsloai table th:nth-child(3){
+    width: 40%;
+    background-color: #ccc;
+    
+}
+.frmdsloai table th:nth-child(4){
+    width: 20%;
+    background-color: #ccc;
+    
+}
+.frmdsloai table td{
+    padding: 10px 20px;
+    border: 1px #9999 solid;
+}  
+
