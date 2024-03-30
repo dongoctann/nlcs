@@ -128,10 +128,8 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
                 $img = $_POST['img'];
                 $price = $_POST['price'];
                 $soluong = 1;
-
                 // Chuyển đổi giá thành số nếu cần thiết
                 $price = floatval($price);
-
                 // Tính toán thành tiền
                 $ttien = $soluong * $price;
 

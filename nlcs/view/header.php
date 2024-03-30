@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- JS -->
-    <script src="../js/itemsList.js"></script>
-    <script src="../js/scripts.js"></script>
+    <!-- <script src="../js/itemsList.js"></script> -->
+    <!-- <script src="../js/scripts.js"></script> -->
 
 </head>
 
@@ -80,11 +80,11 @@
                     </button>
                 </div>
                 <!-- Nút Bill -->
-                <div class="col-auto">
+                <!-- <div class="col-auto">
                     <button type="submit" class="btn rounded-pill btn-outline-light mb-3 email-input large-button" style="border-color: blue;">
                         <a href="index.php?act=mybill" class="text-black">Bill</a>
                     </button>
-                </div>
+                </div> -->
             </div>
 
 

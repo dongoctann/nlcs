@@ -19,8 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- JS -->
-    <script src="../js/itemsList.js"></script>
-    <script src="../js/scripts.js"></script>
+    <!-- <script src="../js/itemsList.js"></script> -->
+    <!-- <script src="../js/scripts.js"></script> -->
 
 </head>
 
@@ -60,18 +60,25 @@
                 <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0 navbar-cart-icon" href="index.php?act=addtocart">
                     <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
                         <!-- Cart items count (số giỏ hàng)-->
-                        <div class="rounded-pill position-absolute">
+                        <!-- <div class="rounded-pill position-absolute">
                             <p class="cartItems fw-bold text-light">0</p>
-                        </div>
+                        </div> -->
                     </button>
                 </a>
 
-                <!-- Account icon (đăng nhập)-->
-                <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
-                    <button class="btn" type="submit">
-                        <i class="fa-solid fa-user"></i>
+                <!-- Nút đăng Ký -->
+                <div class="col-auto">
+                    <button type="submit" class="btn rounded-pill btn-outline-light mb-3 email-input large-button" style="border-color: blue;">
+                        <a href="index.php?act=dangky" class="text-black">Đăng Ký</a>
                     </button>
-                </a>
+
+                </div>
+                <!-- Nút đăng nhập -->
+                <div class="col-auto">
+                    <button type="submit" class="btn rounded-pill btn-outline-light mb-3 email-input large-button" style="border-color: blue;">
+                        <a href="index.php?act=dangnhap" class="text-black">Đăng Nhập</a>
+                    </button>
+                </div>
             </div>
 
             <!-- Second row navbar(thanh vàng) -->

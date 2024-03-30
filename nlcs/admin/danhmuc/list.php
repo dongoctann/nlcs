@@ -34,15 +34,8 @@
                 </table>
             </div>
 
-            <div class="row mb10">
 
-            </div>
-            <div class="row mb10">
-                <input type="button" value="chon tat ca">
-                <input type="button" value="bo chon tat ca">
-                <input type="button" value="xoa cac muc da chon">
-                <a href="index.php?act=adddm"> <input type="button" value="Nhap them"></a>
-            </div>
+
             </form>
         </div>
     </div>

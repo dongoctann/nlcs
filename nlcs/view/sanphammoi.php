@@ -196,27 +196,6 @@
                                         }
                                     </style>
 
-                                    <!-- Thông báo khi thêm vào giỏ hàng -->
-                                    <div class="position-fixed end-0 p-3" style="z-index: 11; bottom: 10%;">
-                                        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-                                            <div class="toast-header text-light rounded-top">
-                                                <strong class="me-auto">Giỏ hàng đã được cập nhật</strong>
-                                            </div>
-                                            <div class="toast-body"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Nút mũi tên bên phải -->
-                                    <button class="rounded-circle scroll-to-top position-fixed border-0" onclick="scrollToTop();">
-                                        <i class="fa-solid fa-chevron-right text-light"></i>
-                                        <!-- Hình giỏ hàng bên phải -->
-                                    </button>
-
-                                    <a href="cart.html" class="cart-icon position-fixed rounded-circle text-center text-white shadow">
-                                        <i class="fa-solid fa-basket-shopping"></i>
-                                        <div class="rounded-pill position-absolute top-0 shadow">
-                                            <p class="cartItems fw-bold text-dark"></p>
-                                        </div>
                                     </a>
                                 </div>
                             </div>

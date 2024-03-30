@@ -54,9 +54,9 @@
                     </label><br>
                 </div>
                 <div class="row mb10">
-                    <input type="submit" name="themmoi" value="THÊM MỚI">
-                    <input type="reset" value="NHẬP LẠI">
-                    <a href="index.php?act=listsp"><input type="button" value="DANH SÁCH"></a>
+                    <input type="submit" class="btn-themmoi" name="themmoi" value="THÊM MỚI">
+                    <input type="reset" class="btn-nhaplai" value="NHẬP LẠI">
+                    <a href="index.php?act=listsp"><input type="button" class="btn-danhsach" value="DANH SÁCH"></a>
                 </div>
 
                 <?php
@@ -70,3 +70,81 @@
 
 
 </main>
+<style>
+    /* CSS cho nút "Thêm Mới" */
+    .btn-themmoi {
+        width: 200px;
+
+        background-color: #4CAF50;
+        /* Màu nền */
+        color: white;
+        /* Màu chữ */
+        padding: 8px 16px;
+        /* Kích thước nút */
+        border: none;
+        /* Không có viền */
+
+        /* Căn giữa chữ */
+        text-decoration: none;
+        /* Không có gạch chân */
+        display: inline-block;
+        /* Hiển thị là khối nút */
+        font-size: 14px;
+        /* Kích thước chữ */
+        margin-right: 10px;
+        /* Khoảng cách với nút khác */
+        cursor: pointer;
+        /* Hiển thị con trỏ khi di chuột vào nút */
+        border-radius: 5px;
+        /* Bo tròn góc của nút */
+    }
+
+    /* CSS cho nút "Nhập Lại" */
+    .btn-nhaplai {
+        width: 200px;
+
+        background-color: #f44336;
+        /* Màu nền */
+        color: white;
+        /* Màu chữ */
+        padding: 10px 20px;
+        /* Kích thước nút */
+        border: none;
+        /* Không có viền */
+        text-align: center;
+        /* Căn giữa chữ */
+        text-decoration: none;
+        /* Không có gạch chân */
+        display: inline-block;
+        /* Hiển thị là khối nút */
+        font-size: 16px;
+        /* Kích thước chữ */
+        margin-right: 10px;
+        border-radius: 5px;
+        /* Khoảng cách với nút khác */
+    }
+
+    /* CSS cho nút "Danh Sách" */
+    .btn-danhsach {
+        margin-left: -11px;
+        width: 200px;
+        border-radius: 5px;
+        margin-top: 5px;
+        background-color: #008CBA;
+        /* Màu nền */
+        color: white;
+        /* Màu chữ */
+        padding: 10px 20px;
+        /* Kích thước nút */
+        border: none;
+        /* Không có viền */
+        text-align: center;
+        /* Căn giữa chữ */
+        text-decoration: none;
+        /* Không có gạch chân */
+        display: inline-block;
+        /* Hiển thị là khối nút */
+        font-size: 16px;
+        /* Kích thước chữ */
+    }
+</style>

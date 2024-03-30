@@ -72,7 +72,7 @@
 
     <style>
         .containerdn {
-            font-size: xx-large;
+            font-size: x-large;
         }
 
         .cssdk {

@@ -22,5 +22,19 @@
     }
 
     ?>
+    <style>
+        .containerdn {
+            font-size: x-large;
+        }
 
+        .cssdk {
+
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </div>

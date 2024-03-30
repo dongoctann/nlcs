@@ -23,6 +23,7 @@
                 </tr>
                 <?php
                 // $spadd = [$id, $name, $img, $price, $soluong, $ttien];
+                $demsl = 0;
                 $tong = 0; // Khởi tạo biến tổng tiền đơn hàng
                 $i = 0;
                 foreach ($_SESSION['mycart'] as $cart) {
@@ -47,6 +48,7 @@
                      <td>' . $xoasp . '</td>
                  </tr>';
                     $i += 1;
+                    $demsl += 1;
                 }
                 echo '<tr>
                  

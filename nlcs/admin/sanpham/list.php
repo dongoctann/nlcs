@@ -61,12 +61,37 @@
                 </table>
             </div>
             <div class="row mb10">
-                <input type="button" value="Chọn Tất Cả">
-                <input type="button" value="Bỏ Chọn Tất Cả">
-                <input type="button" value="Xóa Các Mục Đã Chọn">
-                <a href="index.php?act=addsp"> <input type="button" value="NHẬP THÊM"></a>
+                <a href="index.php?act=addsp"> <input class="btn-themmoi " type="button" value="NHẬP THÊM"></a>
             </div>
             </form>
         </div>
     </div>
+    <style>
+        .btn-themmoi {
+            width: 200px;
+
+            background-color: #008CBA;
+            /* Màu nền */
+            color: white;
+            /* Màu chữ */
+            padding: 8px 16px;
+            /* Kích thước nút */
+            border: none;
+            /* Không có viền */
+
+            /* Căn giữa chữ */
+            text-decoration: none;
+            /* Không có gạch chân */
+            display: inline-block;
+            /* Hiển thị là khối nút */
+            font-size: 14px;
+            /* Kích thước chữ */
+            margin-right: 10px;
+            /* Khoảng cách với nút khác */
+            cursor: pointer;
+            /* Hiển thị con trỏ khi di chuột vào nút */
+            border-radius: 5px;
+            /* Bo tròn góc của nút */
+        }
+    </style>
 </main>

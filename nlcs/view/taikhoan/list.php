@@ -44,12 +44,7 @@
                     ?>
                 </table>
             </div>
-            <div class="row mb10">
-                <input type="button" value="Chọn Tất Cả">
-                <input type="button" value="Bỏ Chọn Tất Cả">
-                <input type="button" value="Xóa Các Mục Đã Chọn">
-                <a href="index.php?act=addsp"> <input type="button" value="NHẬP THÊM"></a>
-            </div>
+
             </form>
         </div>
     </div>

@@ -125,6 +125,6 @@
         <a class="text-dark fw-bold" href="http://127.0.0.1:5500/index.html?#!">Topmenshop.com</a>
     </div>
 
-    <script src="./js/itemsList.js"></script>
+    <!-- <script src="./js/itemsList.js"></script> -->
     <script src="./js/scripts.js"></script>
 </footer>

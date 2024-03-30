@@ -8,7 +8,7 @@ if (is_array($taikhoan)) {
 <main>
     <div class="row headeraddmin">
         <div class="row ">
-            <h1>Cập Nhật tk</h1>
+            <h1>Cập Nhật Tài Khoản</h1>
         </div>
         <div class="row frmcontent">
             <form action="index.php?act=updatetk" method="post" enctype="multipart/form-data">
@@ -51,4 +51,19 @@ if (is_array($taikhoan)) {
 
 
     </div>
+    <style>
+        .containerdn {
+            font-size: x-large;
+        }
+
+        .cssdk {
+
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </main>
