@@ -39,14 +39,21 @@ include "gioithieu.php";
                                 <input type="hidden" name="img" value="' . $hinh . '">
                                 <input type="hidden" name="name" value="' . $name . '">
                                 <input type="hidden" name="price" value="' . $formatted_price . 'đ">
-                                <input type="submit" name="addtocart" value="thêm vào giỏ hàng"  >
+                                <input type="submit"  name="addtocart" id="addToCartBtn" value="thêm vào giỏ hàng"  >
                         </form>
                         </div>
                     </div>';
                         $i += 1;
                     }
                     ?>
-
+                    <script>
+                        const addToCartBtn = document.getElementById('addToCartBtn');
+                        addToCartBtn.addEventListener('click', function() {
+                            const cartItems = document.querySelector('.cartItems');
+                            let currentCount = parseInt(cartItems.textContent);
+                            cartItems.textContent = currentCount + 1;
+                        });
+                    </script>
                     <style>
                         /* trang chu */
 

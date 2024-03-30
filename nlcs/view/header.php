@@ -60,9 +60,9 @@
                 <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0 navbar-cart-icon" href="index.php?act=addtocart">
                     <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
                         <!-- Cart items count (số giỏ hàng)-->
-                        <div class="rounded-pill position-absolute">
-                            <p class="cartItems fw-bold text-light">0</p>
-                        </div>
+                        <!-- <div class=" position-absolute">
+                            <p class="cartItems fw-bold text-light"></p>
+                        </div> -->
                     </button>
                 </a>
 
@@ -79,7 +79,14 @@
                         <a href="index.php?act=dangnhap" class="text-black">Đăng Nhập</a>
                     </button>
                 </div>
+                <!-- Nút Bill -->
+                <div class="col-auto">
+                    <button type="submit" class="btn rounded-pill btn-outline-light mb-3 email-input large-button" style="border-color: blue;">
+                        <a href="index.php?act=mybill" class="text-black">Bill</a>
+                    </button>
+                </div>
             </div>
+
 
             <!-- Second row navbar(thanh vàng) -->
             <div class="container-fluid p-0">
@@ -96,94 +103,23 @@
                             <li class="nav-item active"> <a href="index.php" onclick="scrollToTop();" class="nav-link">Trang chủ</a></li>
                             <!-- <li class="nav-item"><a href="index.php?act=adddm" class="nav-link" data-bs-toggle="modal">Danh muc</a> </li> -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="index.php?act=sanphammoi">Sản phẩm</a>
+                                <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="index.php?act=sanphammoi">Sản phẩm mới</a>
                                 <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
-                                    <li><a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi">Sản phẩm mới</a></li>
-                                    <li><a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi#sanpham-nam">Nam</a></li>
-                                    <li><a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi#sanpham-nu">Nữ</a> </li>
+                                    <a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi">Sản phẩm mới</a>
+                                    <a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi#sanpham-nam">Nam</a>
+                                    <a class="dropdown-item py-2 fw-bold" href="index.php?act=sanphammoi#sanpham-nu">Nữ</a>
+
                                 </ul>
                             </li>
 
+                            <li class="nav-item"><a href="index.php?act=sanphammoi#sanpham-nam" class="nav-link"> NAM </a></li>
+                            <li class="nav-item"><a href="index.php?act=sanphammoi#sanpham-nu" class="nav-link"> NỮ </a></li>
 
-                            <!-- <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#website-unavailable">Blog</a></li> -->
-                            <li class="nav-item"><a href="contact.html" class="nav-link">Liên hệ</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Đăng nhập Đăng ký -->
-        <div class="modal fade" id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content border-0">
-                    <div class="container signup-login" id="signup-login container">
 
-
-
-
-
-
-                        <!-- đăng ký -->
-                        <div class="form-container sign-up-container">
-                            <form action="index.php?act=dangky" method="post" style="width: 100%; transform: translateX(5px);">
-                                <h1 class="fw-bolder">Tạo tài khoản</h1>
-                                <div class="social-container">
-                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <span>Hoặc sử dụng email để đăng ký</span>
-                                <input type="email" name="email" placeholder="Tài khoản email" />
-                                <input type="text" name="user" placeholder="Tên người dùng" />
-                                <input type="password" name="pass" placeholder="Mật khẩu" />
-                                <input type="submit" value="Đăng ký" name="dangky">
-
-                                <?php
-                                if (isset($thongbao) && ($thongbao != "")) {
-                                    echo "<h3 class='thongbao'>$thongbao</h2>";
-                                }
-
-                                ?>
-                            </form>
-
-
-                        </div>
-
-                        <!-- đăng nhập -->
-                        <div class="form-container sign-in-container">
-                            <form action="#" style="width: 50%; transform: translateX(-12px)">
-                                <h1 class="fw-bolder">Đăng nhập</h1>
-                                <div class="social-container">
-                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <span>Hoặc sử dụng tài khoản email của bạn</span>
-                                <input type="email" placeholder="Tài khoản email" />
-                                <input type="password" placeholder="Mật khẩu" />
-                                <span class="mb-2"><a href="#">Quên mật khẩu?</a></span>
-                                <button>Đăng nhập</button>
-                            </form>
-                        </div>
-                        <!-- phần chee đăng nhập đăng kí -->
-                        <div class="overlay-container">
-                            <div class="overlay">
-                                <div class="overlay-panel overlay-left">
-                                    <h1 class="fw-bold">Bạn đã từng đến đây?</h1>
-                                    <p>Hãy đăng nhập để chúng ta có thể kết nối với nhau.</p>
-                                    <button class="ghost bg-dark border-0" id="signIn">Đăng nhập</button>
-                                </div>
-                                <div class="overlay-panel overlay-right">
-                                    <h1 class="fw-bold">Topmenshop xin chào!</h1>
-                                    <p>Nếu đây là lần đầu bạn đến đây, hãy đăng ký để nhận được thông tin mới nhất từ
-                                        Shoes shop nhé!</p>
-                                    <button class="ghost bg-dark border-0" id="signUp">Đăng ký</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>

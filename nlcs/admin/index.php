@@ -1,10 +1,11 @@
 <?php
 
-include "../model/pdo.php";
 include "header.php";
+include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/cart.php";
 //controller danh muc
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -123,6 +124,8 @@ if (isset($_GET['act'])) {
             }
             include "sanpham/update.php";
             break;
+
+
         case 'updatesp':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $id = $_POST['id'];
@@ -146,12 +149,27 @@ if (isset($_GET['act'])) {
             include "sanpham/list.php";
             break;
 
-        case  'dskh':
 
+
+
+
+
+
+        case  'dskh':
             $listtaikhoan = loadall_taikhoan();
             include "../view/taikhoan/list.php";
             break;
 
+        case 'listbill':
+            if (isset($_POST['keyy']) && ($_POST['keyy'] != "")) {
+                $keyy = $_POST['keyy'];
+            } else {
+                $keyy = "";
+            }
+
+            $listbill = loadall_bill($keyy, 0);
+            include "../admin/bill/listbill.php";
+            break;
 
 
 
@@ -165,4 +183,5 @@ if (isset($_GET['act'])) {
 } else {
     include "home.php";
 }
+
 include "footer.php";

@@ -86,88 +86,15 @@
                     <!-- Navbar items (trang chu gioi thieu ...)-->
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item active"> <a href="index.php" onclick="scrollToTop();" class="nav-link">Trang Chủ</a></li>
+                            <li class="nav-item active"> <a href="index.php?act=addsp" onclick="scrollToTop();" class="nav-link">Trang Chủ</a></li>
                             <li class="nav-item"><a href="./index.php?act=listsp" class="nav-link" data-bs-toggle="modal">Danh Mục</a> </li>
-                            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal">Hàng Hóa</a> </li>
                             <li class="nav-item"><a href="./index.php?act=dskh" class="nav-link" data-bs-toggle="modal">Khách Hàng</a> </li>
-                            <li class="nav-item"><a href="#" class="nav-link">Liên hệ</a></li>
+                            <li class="nav-item"><a href="index.php?act=listbill" class="nav-link">Danh Sách Đơn Hàng</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Đăng nhập Đăng ký -->
-        <div class="modal fade" id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content border-0">
-                    <div class="container signup-login" id="signup-login container">
 
-
-
-
-
-
-                        <!-- đăng ký -->
-                        <div class="form-container sign-up-container">
-                            <form action="index.php?act=dangky" method="post" style="width: 100%; transform: translateX(5px);">
-                                <h1 class="fw-bolder">Tạo tài khoản</h1>
-                                <div class="social-container">
-                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <span>Hoặc sử dụng email để đăng ký</span>
-                                <input type="email" name="email" placeholder="Tài khoản email" />
-                                <input type="text" name="user" placeholder="Tên người dùng" />
-                                <input type="password" name="pass" placeholder="Mật khẩu" />
-                                <input type="submit" value="Đăng ký" name="dangky">
-
-                                <?php
-                                if (isset($thongbao) && ($thongbao != "")) {
-                                    echo "<h3 class='thongbao'>$thongbao</h2>";
-                                }
-
-                                ?>
-                            </form>
-
-
-                        </div>
-
-                        <!-- đăng nhập -->
-                        <div class="form-container sign-in-container">
-                            <form action="#" style="width: 50%; transform: translateX(-12px)">
-                                <h1 class="fw-bolder">Đăng nhập</h1>
-                                <div class="social-container">
-                                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <span>Hoặc sử dụng tài khoản email của bạn</span>
-                                <input type="email" placeholder="Tài khoản email" />
-                                <input type="password" placeholder="Mật khẩu" />
-                                <span class="mb-2"><a href="#">Quên mật khẩu?</a></span>
-                                <button>Đăng nhập</button>
-                            </form>
-                        </div>
-                        <!-- phần chee đăng nhập đăng kí -->
-                        <div class="overlay-container">
-                            <div class="overlay">
-                                <div class="overlay-panel overlay-left">
-                                    <h1 class="fw-bold">Bạn đã từng đến đây?</h1>
-                                    <p>Hãy đăng nhập để chúng ta có thể kết nối với nhau.</p>
-                                    <button class="ghost bg-dark border-0" id="signIn">Đăng nhập</button>
-                                </div>
-                                <div class="overlay-panel overlay-right">
-                                    <h1 class="fw-bold">Topmenshop xin chào!</h1>
-                                    <p>Nếu đây là lần đầu bạn đến đây, hãy đăng ký để nhận được thông tin mới nhất từ
-                                        Shoes shop nhé!</p>
-                                    <button class="ghost bg-dark border-0" id="signUp">Đăng ký</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>

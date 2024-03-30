@@ -57,8 +57,8 @@
                 ?>
         </table>
         <div class="row mb bill">
-            <a href="index.php?act=bill">
 
+            <a href="index.php?act=bill">
                 <input type="button" class="sua-btn" style="width: 100%;" value="Tiếp Tục đặt hàng">
             </a>
             <a href="index.php?act=delcart">

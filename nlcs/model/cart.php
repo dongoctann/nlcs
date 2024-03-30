@@ -1,16 +1,16 @@
 
 <?php
-function insert_bill($name, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
+function insert_bill($iduser, $user, $email, $address, $tel, $pttt, $ngaydathang, $tongdonhang)
 {
     // Sửa lại thứ tự các cột và đảm bảo giá trị số được truyền vào được định dạng đúng
-    $sql = "INSERT INTO bill (bill_name, bill_address, bill_email, bill_pttt, bill_tel, ngaydathang, total) 
-                    VALUES ('$name', '$address', '$email', $pttt, '$tel', '$ngaydathang', $tongdonhang)";
+    $sql = "INSERT INTO bill(iduser,bill_name, bill_address, bill_email, bill_pttt, bill_tel, ngaydathang, total) 
+                    VALUES('$iduser','$user', '$address', '$email', $pttt, '$tel', '$ngaydathang', $tongdonhang)";
 
     return pdo_execute_return_lastInsertID($sql);
 }
-function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien, $idbill)
+function insert_cart($iduser, $idpro, $img, $user, $price, $soluong, $thanhtien, $idbill)
 {
-    $sql = "insert into cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill) values('$iduser', '$idpro',' $img', '$name', '$price', '$soluong',' $thanhtien', '$idbill')";
+    $sql = "insert into cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill) values('$iduser', '$idpro',' $img', '$user', '$price', '$soluong',' $thanhtien', '$idbill')";
     return pdo_execute($sql);
 }
 function loadone_bill($id)
@@ -20,11 +20,32 @@ function loadone_bill($id)
     return $bill;
 }
 
+
+
+function loadall_bill($keyy = "", $iduser = 0)
+{
+    $sql = "SELECT * FROM bill WHERE 1";
+    if ($iduser > 0)  $sql .= " AND iduser=" . $iduser;
+    if ($keyy != "")  $sql .= " AND id LIKE '%" . $keyy . "%'";
+    $sql .= " ORDER BY id DESC";
+    $listbill = pdo_query($sql);
+    return $listbill;
+}
+
+
+
 function loadall_cart($idbill)
 {
     $sql = "select * from cart where idbill=" . $idbill;
     $bill = pdo_query($sql);
     return $bill;
+}
+
+function loadall_cart_count($idbill)
+{
+    $sql = "select * from cart where idbill=" . $idbill;
+    $bill = pdo_query($sql);
+    return sizeof($bill);
 }
 
 
@@ -40,39 +61,24 @@ function tongdonhang()
     return $tong;
 }
 
-// function viewcart()
-// {
-//     global $img_path;
-//     //  $spadd = [$id, $name, $img, $price, $soluong, $thanh_tien];
-//     $tong = 0; // Khởi tạo biến tổng tiền đơn hàng
-//     $i = 0;
-//     foreach ($_SESSION['mycart'] as $cart) {
-
-//         $hinh = $img_path . $cart[2];
-//         $ttien = 0;
-//         if (is_numeric($cart[3]) && is_numeric($cart[4])) {
-//             $ttien = $cart['3'] * $cart['4'];
-//         } else {
-//             // Xử lý trường hợp không phải là số (nếu cần)
-//         }
-
-//         $tong += $ttien;
-//         $xoasp = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa"></a>';
-//         echo '
-//       <tr>
-//           <td><img src="' . $hinh . '" alt="" height="80px"></td>
-//           <td>' . $cart[1] . '</td>
-//           <td>' . $cart[3] . '</td>
-//           <td>' . $cart[4] . '</td>
-//           <td>' . $ttien . '</td>
-//           <td>' . $xoasp . '</td>
-//       </tr>';
-//         $i += 1;
-//     }
-//     echo '<tr>
-      
-//           <td colspan="4">Tổng Đơn Hàng</td>
-//           <td> ' . $tong . '</td>
-//           <td></td>
-//           </tr>';
-// }
+function get_ttdh($n)
+{
+    switch ($n) {
+        case '0':
+            $stt = "Đơn Hàng Mới";
+            break;
+        case '1':
+            $stt = "Đang Xử Lý";
+            break;
+        case '2':
+            $stt = "Đang Giao Hàng";
+            break;
+        case '3':
+            $stt = "Hoàn Tất";
+            break;
+        default:
+            $stt = "Đơn Hàng Mới";
+            break;
+    }
+    return $stt;
+}

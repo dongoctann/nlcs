@@ -23,83 +23,83 @@ function searchbarResize() {
 
 
 //This function calculate the total of items in customer's cart(chức năng này tính tổng số mặt hàng trong giỏ hàng của khách hàng)
-let cartItems = 0;
+// let cartItems = 0;
 
-function countCart() {
-    cartItems = 0;
-    for(const product in itemList) {
-        if(window.localStorage.getItem(product) > 0) {
-            cartItems += parseInt(window.localStorage.getItem(product));
-        }
-    }
-}
+// function countCart() {
+//     cartItems = 0;
+//     for(const product in itemList) {
+//         if(window.localStorage.getItem(product) > 0) {
+//             cartItems += parseInt(window.localStorage.getItem(product));
+//         }
+//     }
+// }
 
 
 //This function combine 2 adsvertisements to one(chức năng này kết hợp 2 quảng cáo thành một)
 //2 quảng cáo//
-function AdsResize() {
-    if($(window).width() < 1200) {
-        $('.ads-picture-container-rightside .carousel-ads').append(
-            `<div class="carousel-item h-100">
-                <img class="h-100" src="./img/hamau3.jfifg" alt="">
-            </div>
-            <div class="carousel-item h-100">
-                <img class="h-100" src="./img/hamau4.jfif" alt="">
-            </div>`
-        );
-    }
-    else {
-        $('.ads-picture-container-rightside .carousel-ads').html(
-            `<div class="carousel-item active h-100">
-                <img class="h-100" src="./img/hamau1.jfif" alt="">
-            </div>
-            <div class="carousel-item h-100">
-                <img class="h-100" src="./img/hamau2.jfif" alt="">
-            </div>`
-        );
-    }
-}
+// function AdsResize() {
+//     if($(window).width() < 1200) {
+//         $('.ads-picture-container-rightside .carousel-ads').append(
+//             `<div class="carousel-item h-100">
+//                 <img class="h-100" src="./img/hamau3.jfifg" alt="">
+//             </div>
+//             <div class="carousel-item h-100">
+//                 <img class="h-100" src="./img/hamau4.jfif" alt="">
+//             </div>`
+//         );
+//     }
+//     else {
+//         $('.ads-picture-container-rightside .carousel-ads').html(
+//             `<div class="carousel-item active h-100">
+//                 <img class="h-100" src="./img/hamau1.jfif" alt="">
+//             </div>
+//             <div class="carousel-item h-100">
+//                 <img class="h-100" src="./img/hamau2.jfif" alt="">
+//             </div>`
+//         );
+//     }
+// }
 
 
 // Add to cart
-function addCart(code) {
+// function addCart(code) {
 
-    //Stop current notification animation
-    $('#liveToast').stop(true, false);
+//     //Stop current notification animation
+//     $('#liveToast').stop(true, false);
 
-    //Get item value
-    var currentValue = parseInt(window.localStorage.getItem(code))
+//     //Get item value
+//     var currentValue = parseInt(window.localStorage.getItem(code))
 
-    //Add notification text
-    if(window.localStorage.getItem(code) == null) {
-        window.localStorage.setItem(code, 1)
-         $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là 1.`);
-    }
-    else {
-        window.localStorage.setItem(code, 1+currentValue)
-        $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
-    }
-
-
-    //Update badge
-    countCart();
-    $(".cartItems").text(cartItems);
+//     //Add notification text
+//     if(window.localStorage.getItem(code) == null) {
+//         window.localStorage.setItem(code, 1)
+//          $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là 1.`);
+//     }
+//     else {
+//         window.localStorage.setItem(code, 1+currentValue)
+//         $('.toast-body').html(`Đã thêm ${itemList[code].name} vào giỏ hàng. <br>Số lượng hiện tại là ${window.localStorage.getItem(code)}.`);
+//     }
 
 
-    //Add to cart live notification
-    $('#liveToast').fadeIn();
-    $(".cart-icon i").css("transform", "translate(0, -5px)");
-    $(".cart-icon i").css("font-size", "35px");
-    $(".cart-icon i").css("transition", ".25s linear");
+//     //Update badge
+//     countCart();
+//     $(".cartItems").text(cartItems);
 
-    setTimeout(function() {
-        $(".cart-icon i").css("font-size", "22px");
-        $(".cart-icon i").css("transition", ".15s linear");
-        $(".cart-icon i").css("transform", "none");
-    },250)
 
-    setTimeout(function(){$('#liveToast').fadeOut()}, 3000);
-}
+//     //Add to cart live notification
+//     $('#liveToast').fadeIn();
+//     $(".cart-icon i").css("transform", "translate(0, -5px)");
+//     $(".cart-icon i").css("font-size", "35px");
+//     $(".cart-icon i").css("transition", ".25s linear");
+
+//     setTimeout(function() {
+//         $(".cart-icon i").css("font-size", "22px");
+//         $(".cart-icon i").css("transition", ".15s linear");
+//         $(".cart-icon i").css("transform", "none");
+//     },250)
+
+//     setTimeout(function(){$('#liveToast').fadeOut()}, 3000);
+// }
 
 
 //Add an item to wish list
@@ -288,8 +288,8 @@ $(document).ready(function () {
 
 
     //Set badge
-    countCart();
-    $(".cartItems").text(cartItems);
+    // countCart();
+    // $(".cartItems").text(cartItems);
 
 
     //Assure product card image always square
@@ -305,38 +305,38 @@ $(window).resize(function () {
 });
 
 
-let count = 0;
-for (const product in itemList) {
-    let addProductCard = 
-    `<div class="col my-2">
-        <div class="card">
-            <div class="card-img rounded-0 overflow-hidden"><img class="img-hover-effect w-100" src="${itemList[product].photo}" alt=""></div>
-            <div class="card-body">
-                <h5 class="card-title fs-5">${itemList[product].name}</h5>
-                <p class="card-text fs-6">${new Intl.NumberFormat().format(itemList[product].price)} đ</p>
-            </div>
-            <div class="card-footer text-center border-top-0">
-                <a title="Thêm yêu thích" class="pe-3 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
-                <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('${product}');">Mua ngay</a>
-            </div>
-        </div>
-    </div>`
+// let count = 0;
+// for (const product in itemList) {
+//     let addProductCard = 
+//     `<div class="col my-2">
+//         <div class="card">
+//             <div class="card-img rounded-0 overflow-hidden"><img class="img-hover-effect w-100" src="${itemList[product].photo}" alt=""></div>
+//             <div class="card-body">
+//                 <h5 class="card-title fs-5">${itemList[product].name}</h5>
+//                 <p class="card-text fs-6">${new Intl.NumberFormat().format(itemList[product].price)} đ</p>
+//             </div>
+//             <div class="card-footer text-center border-top-0">
+//                 <a title="Thêm yêu thích" class="pe-3 heart-icon ${product}" onclick="addWishList('${product}');"><i class="fa-regular fa-heart"></i></a>
+//                 <a class="btn rounded-pill bottom-0 border text-dark fs-6 oder" onclick="addCart('${product}');">Mua ngay</a>
+//             </div>
+//         </div>
+//     </div>`
 
-    if(product.search("hot") != -1) {
-        $(".hot-selling-products-card").append(addProductCard);
-    }
+//     if(product.search("hot") != -1) {
+//         $(".hot-selling-products-card").append(addProductCard);
+//     }
 
-    if(product.search("new") != -1) {
-        $(".new-products-card").append(addProductCard);
-    }
+//     if(product.search("new") != -1) {
+//         $(".new-products-card").append(addProductCard);
+//     }
 
-    if(product.search("men") != -1) {
-        $(".for-men-products-card").append(addProductCard);
-    }
+//     if(product.search("men") != -1) {
+//         $(".for-men-products-card").append(addProductCard);
+//     }
 
-    if(product.search("lady") != -1) {
-        $(".for-women-products-card").append(addProductCard);
-    }
-    count++;
-}
+//     if(product.search("lady") != -1) {
+//         $(".for-women-products-card").append(addProductCard);
+//     }
+//     count++;
+// }
 

@@ -6,6 +6,12 @@ function loadall_taikhoan()
     return $listtaikhoan;
 }
 
+function loadone_taikhoan($id)
+{
+    $sql = "select * from taikhoan where id=" . $id;
+    $tk = pdo_query_one($sql);
+    return $tk;
+}
 
 function insert_taikhoan($email, $user, $pass)
 {

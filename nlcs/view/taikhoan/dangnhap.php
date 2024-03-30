@@ -1,5 +1,5 @@
-<div class="container cssdk ">
-    <h2>Đăng Nhập thành viên</h2>
+<div class="containerdn cssdk ">
+    <h1>Đăng Nhập thành viên</h1>
     <?php
     if (isset($_SESSION['user'])) {
         extract($_SESSION['user']);
@@ -18,7 +18,9 @@
                 <a href="admin/index.php?act=addsp">Đăng Nhập Admin</a>
             </li>
         <?php  } ?>
-
+        <li>
+            <a href="index.php?act=mybill">Đơn Hàng của tôi</a>
+        </li>
         <li>
             <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
         </li>
@@ -67,5 +69,21 @@
     }
 
     ?>
+
+    <style>
+        .containerdn {
+            font-size: xx-large;
+        }
+
+        .cssdk {
+
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
 
 </div>

@@ -19,11 +19,22 @@
                         // Định dạng giá tiền ở đây
                         $formatted_price = number_format($price, 0, ',', '.');
                         echo '
-              <div class="boxsp mr">
-              <a href="index.php?act=sanphamct&idsp=' . $id . '"><img src="' . $hinh . '" alt=""></a>
-              <p class="price">' . $formatted_price . 'đ</p>
-              <h3>' . $name . '</h3>
-          </div> ';
+                     <div class="boxsp mr">
+                     <a href="index.php?act=sanphamct&idsp=' . $id . '"><img src="' . $img_path . $img . '" alt=""></a>
+                     <p class="price">' . number_format($price, 0, ',', '.') . 'đ</p>
+                     <h5>' . $name . '</h5>
+                  
+                
+                     <div class=" mr">
+                     <form action="index.php?act=addtocart" method="post">
+                             <input type="hidden" name="id" value="' . $id . '">
+                             <input type="hidden" name="img" value="' . $hinh . '">
+                             <input type="hidden" name="name" value="' . $name . '">
+                             <input type="hidden" name="price" value="' . $formatted_price . 'đ">
+                             <input type="submit" name="addtocart" value="thêm vào giỏ hàng"  >
+                     </form>
+                     </div>
+                 </div>';
                         $i += 1;
                     }
                     ?>

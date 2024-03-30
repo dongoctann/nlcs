@@ -127,54 +127,54 @@ function removeItem(removeButton) {
 }
 
 // These code calculate total price of a type item and put it to webpage
-let itemTotalPrice=0;
+// let itemTotalPrice=0;
 
-for(const product in itemList) {
+// for(const product in itemList) {
     
-    //Calculate the total price of all products exist in cart
-    itemTotalPrice+= itemList[product].price * window.localStorage.getItem(product);
+//     //Calculate the total price of all products exist in cart
+//     itemTotalPrice+= itemList[product].price * window.localStorage.getItem(product);
 
-    //Display added to cart products
-    if(window.localStorage.getItem(product) > 0) {
-        $(".basket-labels").after(
-            `<div class="basket-product"> 
-                <div class="item"> 
-                    <div class="product-image"> 
-                        <img src="${itemList[product].photo}"alt="Placholder Image 2" class="product-frame"> 
-                    </div>
-                    <div class="product-details"> 
-                        <h1><span class="item-quantity">${window.localStorage.getItem(product)}</span> x ${itemList[product].name}</h1> 
-                    </div>
-                </div>
-                <div class="price product-price">${itemList[product].price}</div>
-                <div class="quantity"> 
-                    <input type="number" value="${window.localStorage.getItem(product)}" min="1" class="quantity-field text-center" id="${product}" oninput="changeLocalStorage('${product}');"> 
-                </div>
-                <div class="subtotal product-subtotal">${itemList[product].price * window.localStorage.getItem(product)}</div>
-                <div class="remove"> 
-                    <button class="px-2" onclick="removeFromCart('${product}');">Xóa khỏi giỏ hàng</button> 
-                </div>
-            </div>`);
-    }
-}
-$('#basket-total').text(itemTotalPrice);
+//     //Display added to cart products
+//     if(window.localStorage.getItem(product) > 0) {
+//         $(".basket-labels").after(
+//             `<div class="basket-product"> 
+//                 <div class="item"> 
+//                     <div class="product-image"> 
+//                         <img src="${itemList[product].photo}"alt="Placholder Image 2" class="product-frame"> 
+//                     </div>
+//                     <div class="product-details"> 
+//                         <h1><span class="item-quantity">${window.localStorage.getItem(product)}</span> x ${itemList[product].name}</h1> 
+//                     </div>
+//                 </div>
+//                 <div class="price product-price">${itemList[product].price}</div>
+//                 <div class="quantity"> 
+//                     <input type="number" value="${window.localStorage.getItem(product)}" min="1" class="quantity-field text-center" id="${product}" oninput="changeLocalStorage('${product}');"> 
+//                 </div>
+//                 <div class="subtotal product-subtotal">${itemList[product].price * window.localStorage.getItem(product)}</div>
+//                 <div class="remove"> 
+//                     <button class="px-2" onclick="removeFromCart('${product}');">Xóa khỏi giỏ hàng</button> 
+//                 </div>
+//             </div>`);
+//     }
+// }
+// $('#basket-total').text(itemTotalPrice);
 
 
 //Remove an item from cart
-function removeFromCart(code) {
-    window.localStorage.setItem(code, 0);
+// function removeFromCart(code) {
+//     window.localStorage.setItem(code, 0);
     
-    //Set badge
-    countCart();
-    $(".cartItems").text(cartItems);
-}
+//     //Set badge
+//     countCart();
+//     $(".cartItems").text(cartItems);
+// }
 
 
 //This function change local storage on input
-function changeLocalStorage(code) {
-    window.localStorage.setItem(code, $(`#${code}`).val());
+// function changeLocalStorage(code) {
+//     window.localStorage.setItem(code, $(`#${code}`).val());
     
-    //Set badge
-    countCart();
-    $(".cartItems").text(cartItems);
-}
+//     //Set badge
+//     countCart();
+//     $(".cartItems").text(cartItems);
+// }
